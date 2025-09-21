@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fce576b3b29ee439af56eaa7f317d2, type: 3}
+  m_Name: Metapod
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonNames
+  Name: metapod
+  PokemonPrefab: {fileID: 6232810412869256538, guid: dabb8742b3f9609438d845481d1039da, type: 3}
+  spellRarity: 0
