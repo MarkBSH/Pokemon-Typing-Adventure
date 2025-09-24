@@ -1,1 +1,3 @@
 :warning: This is a game based on Pokemon Typing Adventure (Practically the same game, but shit and on PC) and because it's from Nintendo I am not selling it or releasing it because it's for a school project. I don't want to get sued so don't do anything wrong with this. :warning:
+
+Not finished, but I am currently working on it.
