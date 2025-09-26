@@ -34,9 +34,6 @@ public class LetterTag : MonoBehaviour
     public void SetLetter(string letter)
     {
         m_Letter = letter;
-        Debug.Log("Setting letter: " + m_Letter);
-        Debug.Log("Setting letter text: " + m_Letter.ToUpper());
-        Debug.Log("Setting letter text: " + m_LetterText);
         m_LetterText.text = m_Letter.ToUpper();
     }
 
