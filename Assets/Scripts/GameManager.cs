@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -53,7 +54,14 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         m_IsGameActive = false;
-        // Handle end game logic here (e.g., show score, save data, etc.)
+        foreach (var pokemon in FindObjectsByType<Pokemon>(FindObjectsSortMode.None))
+        {
+            Destroy(pokemon.gameObject);
+        }
+        TypingManager.Instance.m_ActivePokemon.Clear();
+        TypingManager.Instance.m_ActivePokemonNames.Clear();
+
+        ShowConsoleMessage();
     }
 
     #endregion
@@ -128,4 +136,35 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    private void ShowConsoleMessage()
+    {
+        Debug.Log("Saved Data: " +
+                  "\nScore: " + m_Score +
+                  "\nLives: " + m_Lives +
+                  "\nTotal Responses: " + m_TotalResponses +
+                  "\nAverage Response Time: " + m_AverageResponseTime +
+                  "\nSlowest Response Time: " + m_slowestResponseTime +
+                  "\nTotal Fails: " + m_TotalFails +
+                  "\nMost Consecutive Fails: " + m_MostConsecutiveFails +
+                  "\nGame Time: " + m_GameTime + " seconds");
+
+        Debug.Log("What I still need to do:" +
+                  "\n- Save data to a database" +
+                  "\n- Make data visible on svelte-db-portal" +
+                  "\n- Create a main menu" +
+                  "\n- Create a game over screen" +
+                  "\n- Create UI elements" +
+                  "\n- Add sound effects");
+
+        Debug.Log("What works:" +
+                  "\n- Spawning Pokemon" +
+                  "\n- Typing letters" +
+                  "\n- Scoring system" +
+                  "\n- Lives system" +
+                  "\n- Difficulty scaling" +
+                  "\n- Tracking response times and fails" +
+                  "\n- started database with correct information (not yet connected to game)"
+                  );
+    }
 }
